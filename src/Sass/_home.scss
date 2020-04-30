@@ -54,6 +54,30 @@
     z-index: -2;
 }
 
+.code {
+    font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    color: $color-white;
+    text-align: left;
+
+    &--green {
+        color: $color-code-green;
+    }
+    &--darkblue {
+        color: $color-tertiary-dark;
+    }
+    &--lightblue {
+        color: $color-tertiary-light;
+    }
+    &--yellow {
+        color: $color-code-yellow;
+    }
+    &--red {
+        color: $color-code-brown;
+    }
+
+
+}
+
 @keyframes float {
   0% {
     transform: translatey(0px);
