@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Cursor from './Cursor';
 
 export default class Typewriter extends Component {
     constructor(props) {
@@ -34,7 +35,7 @@ export default class Typewriter extends Component {
                 }, this.props.speed);
             });
         } else {
-            this.props.callback(index+1); //current word typed
+            this.props.callback(index + 1); //current word typed
             this._timeout = setTimeout(() => {
                 this.erase();
             }, this.props.delay);
@@ -66,7 +67,11 @@ export default class Typewriter extends Component {
         } = this.props;
         const { displayText, index } = this.state;
         return (
-            <span className={className}>{displayText}</span>
+            <Fragment>
+                <span className={className}>{displayText}</span>
+                <Cursor />
+            </Fragment>
+
         );
     }
 }

@@ -24,7 +24,7 @@
     font-size: $font-size;
     color: $color-grey-dark-3;
     background-color: $color-grey-light-1;
-    padding: 5rem;
+    padding: 4rem;
     border-radius: 11px;
     position: relative;
     box-shadow: 20px 20px $color-grey-dark-2;
@@ -54,31 +54,39 @@
     z-index: -2;
 }
 
-.code {
-    font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-    color: $color-white;
-    text-align: left;
-    &--green {
-        color: $color-code-green;
+.right {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .code {
+        font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+        color: $color-white;
+        text-align: left;
+        &--green {
+            color: $color-code-green;
+        }
+        &--darkblue {
+            color: $color-tertiary-dark;
+        }
+        &--lightblue {
+            color: $color-tertiary-light;
+        }
+        &--yellow {
+            color: $color-code-yellow;
+        }
+        &--red {
+            color: $color-code-brown;
+        }
+        &__block {
+            max-width: 25rem;
+        }
     }
-    &--darkblue {
-        color: $color-tertiary-dark;
-    }
-    &--lightblue {
-        color: $color-tertiary-light;
-    }
-    &--yellow {
-        color: $color-code-yellow;
-    }
-    &--red {
-        color: $color-code-brown;
-    }
-    &__block {
-        max-width: 25rem;
-    }
-
-
 }
+.fade {
+    display: inline-flex;
+}
+
 
 @keyframes float {
   0% {
