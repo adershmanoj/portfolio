@@ -34,9 +34,10 @@ export default class Typewriter extends Component {
                 }, this.props.speed);
             });
         } else {
+            this.props.callback(index+1); //current word typed
             this._timeout = setTimeout(() => {
                 this.erase();
-            }, this.props.delay * 2);
+            }, this.props.delay);
         }
     }
 
@@ -63,9 +64,9 @@ export default class Typewriter extends Component {
             text,
             className,
         } = this.props;
-        const { displayText } = this.state;
+        const { displayText, index } = this.state;
         return (
-            <span className = {className}>{displayText}</span>
+            <span className={className}>{displayText}</span>
         );
     }
 }

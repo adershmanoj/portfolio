@@ -58,7 +58,6 @@
     font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     color: $color-white;
     text-align: left;
-
     &--green {
         color: $color-code-green;
     }
@@ -73,6 +72,9 @@
     }
     &--red {
         color: $color-code-brown;
+    }
+    &__block {
+        max-width: 25rem;
     }
 
 
