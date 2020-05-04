@@ -2,9 +2,14 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-    .left, .right {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    .left,
+    .right {
         flex: 1;
+    }
+    .left {
+        display: flex;
+        justify-content: center;
     }
 }
 .helloworld {
@@ -40,7 +45,7 @@
     // border: 1px solid $color-green;
     text-shadow: 22px 22px $color-grey-dark-2;
     text-align: left;
-    font-size: $font-size*2;
+    font-size: $font-size * 2;
     width: 3rem;
     height: 0.7rem;
     line-height: 30px;
@@ -57,12 +62,17 @@
 .right {
     flex-direction: column;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    .fade {
+        display: inline-flex;
+    }
     .code {
-        font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+        font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
         color: $color-white;
         text-align: left;
+        margin-top: 3rem;
+        flex: 0.4;
         &--green {
             color: $color-code-green;
         }
@@ -79,40 +89,37 @@
             color: $color-code-brown;
         }
         &__block {
-            max-width: 25rem;
+            margin: 0 auto;
+            width: 25rem;
         }
     }
 }
-.fade {
-    display: inline-flex;
-}
-
 
 @keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-20px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }
 
 @keyframes float2 {
-  0% {
-    line-height: 30px;
-    transform: translatey(0px);
-  }
-  55% {
-    transform: translatey(-20px);
-  }
-  60% {
-    line-height: 10px;
-  }
-  100% {
-    line-height: 30px;
-    transform: translatey(0px);
-  }
+    0% {
+        line-height: 30px;
+        transform: translatey(0px);
+    }
+    55% {
+        transform: translatey(-20px);
+    }
+    60% {
+        line-height: 10px;
+    }
+    100% {
+        line-height: 30px;
+        transform: translatey(0px);
+    }
 }

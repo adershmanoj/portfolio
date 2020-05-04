@@ -1,0 +1,34 @@
+.portrait {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    & svg {
+        flex: 0 0 300px;
+        overflow: visible;
+    }
+}
+
+
+$bezier: cubic-bezier(0.25, 0.8, 0.25, 1);
+$class: st !default;
+
+@for $i from 0 through 339 {
+    svg {
+        .#{$class}#{$i} {
+            opacity: 0;
+            transform: scale(0.5)
+                translate3d(random(500) - 250 + px, random(500) - 250 + px, random(500) - 250 + px)
+                rotate(random(360deg) - 180deg);
+            transform-origin: center;
+            transition: transform 1.6s $bezier, opacity 1.6s $bezier;
+            transition-delay: random(100) * 0.01s;
+            z-index: random(100);
+        }
+        &.animate {
+            .#{$class}#{$i} {
+                opacity: 1;
+                transform: scale(1.02) translate3d(0, 0, 0) rotate(0deg);
+            }
+        }
+    }
+}
