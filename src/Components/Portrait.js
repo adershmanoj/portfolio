@@ -12,7 +12,7 @@ const Portrait = () => {
             setFirst(false);
         }
         else {
-            const timer1 = setTimeout(() => setActive(prevState => !prevState), 5000);
+            const timer1 = setTimeout(() => setActive(prevState => !prevState), 7000);
             return () => {
                 clearTimeout(timer1)
             }

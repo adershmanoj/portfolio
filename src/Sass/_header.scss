@@ -3,9 +3,10 @@ $max: 5;
 $stroke-step: 7%;
 
 .header {
-    font: 37rem/1 Arial;
+    font: 19em/1 Arial;
+    margin-top: 5rem;
     & text {
-        font-size: 0.5em;
+        font-size: 20rem;
     }
 
     & svg {

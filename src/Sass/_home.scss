@@ -10,6 +10,7 @@
     .left {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 }
 .helloworld {
@@ -63,15 +64,15 @@
     flex-direction: column;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     .fade {
         display: inline-flex;
     }
     .code {
+        font-size: $font-size;
         font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
         color: $color-white;
         text-align: left;
-        margin-top: 3rem;
         flex: 0.4;
         &--green {
             color: $color-code-green;
@@ -89,8 +90,7 @@
             color: $color-code-brown;
         }
         &__block {
-            margin: 0 auto;
-            width: 25rem;
+            width: 40rem;
         }
     }
 }

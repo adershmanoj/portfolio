@@ -20,7 +20,7 @@ $class: st !default;
                 translate3d(random(500) - 250 + px, random(500) - 250 + px, random(500) - 250 + px)
                 rotate(random(360deg) - 180deg);
             transform-origin: center;
-            transition: transform 1.6s $bezier, opacity 1.6s $bezier;
+            transition: transform 2s $bezier, opacity 2s $bezier;
             transition-delay: random(100) * 0.01s;
             z-index: random(100);
         }
