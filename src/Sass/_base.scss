@@ -21,8 +21,15 @@ html {
 
 body {
   box-sizing: border-box;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  color: $color-white;
 }
 ::selection {
   background-color: $color-primary;
   color: $color-white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

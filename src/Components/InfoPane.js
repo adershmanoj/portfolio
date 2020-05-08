@@ -2,8 +2,8 @@ import React, { memo } from 'react';
 
 const InfoPane = ({ data }) => {
     return (
-        <div className='helloworld'>
-            <div className="helloworld__text">
+        <div className='infopane'>
+            <div className="infopane__text">
                 {data.map((text) => <p>{text}</p>)}
             </div>
         </div>

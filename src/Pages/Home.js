@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Typewriter from '../Components/Typewriter';
 import FadeIn from 'react-fade-in';
-import InfoPane from '../Components/InfoPane';
 import Portrait from '../Components/Portrait';
 import Header from '../Components/Header';
 
@@ -21,13 +20,12 @@ function Home() {
         )
     )
     return (
-        <div className='container'>
+        <div className='container home'>
             <div className='left'>
-                {/* <InfoPane data = {["Hello,", "World!", "I'M ADERSH"]} /> */}
                 <Portrait />
             </div>
             <div className='right'>
-                <Header text="ADERSH MANOJ" />
+                <Header first="ADERSH" last="MANOJ" height="500" />
                 <div className='code'>
                     <p><code className='code--darkblue'>const</code> <code className='code--lightblue'>adersh</code>: <code className='code--green'>Array</code>&lt;<code className='code--green'>Interests</code>&gt;;</p>
                     <p><code className='code--lightblue'>adersh</code>.<code className='code--yellow'>push</code>(<Typewriter callback={setIndex}{...typewriterSettings} className='code--red' text={interests} />);</p>

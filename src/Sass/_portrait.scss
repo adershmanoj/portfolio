@@ -8,7 +8,6 @@
     }
 }
 
-
 $bezier: cubic-bezier(0.25, 0.8, 0.25, 1);
 $class: st !default;
 
@@ -20,6 +19,7 @@ $class: st !default;
                 translate3d(random(500) - 250 + px, random(500) - 250 + px, random(500) - 250 + px)
                 rotate(random(360deg) - 180deg);
             transform-origin: center;
+            -webkit-transition: transform 2s $bezier, opacity 2s $bezier;
             transition: transform 2s $bezier, opacity 2s $bezier;
             transition-delay: random(100) * 0.01s;
             z-index: random(100);
@@ -27,7 +27,7 @@ $class: st !default;
         &.animate {
             .#{$class}#{$i} {
                 opacity: 1;
-                transform: scale(1.02) translate3d(0, 0, 0) rotate(0deg);
+                transform: translate3d(0, 0, 0) scale(1.02) rotate(0deg);
             }
         }
     }
