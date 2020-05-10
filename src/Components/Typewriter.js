@@ -1,7 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import Cursor from './Cursor';
+import React, { Component, Fragment , memo} from 'react';
 
-export default class Typewriter extends Component {
+class Typewriter extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -69,7 +68,7 @@ export default class Typewriter extends Component {
         return (
             <Fragment>
                 <span className={className}>{displayText}</span>
-                <Cursor />
+                <div className='cursor'>|</div>
             </Fragment>
 
         );
@@ -77,5 +76,8 @@ export default class Typewriter extends Component {
 }
 Typewriter.defaultProps = {
     speed: 100,
-    delay: 500
+    delay: 500,
+    text: [],
+    callback: () => {}
 };
+export default memo(Typewriter);
