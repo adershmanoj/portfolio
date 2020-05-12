@@ -58,13 +58,8 @@ class Typewriter extends Component {
         }
     }
     render() {
-        const {
-            speed,
-            delay,
-            text,
-            className,
-        } = this.props;
-        const { displayText, index } = this.state;
+        const {className} = this.props;
+        const { displayText} = this.state;
         return (
             <Fragment>
                 <span className={className}>{displayText}</span>

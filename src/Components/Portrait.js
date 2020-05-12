@@ -18,7 +18,7 @@ const Portrait = () => {
             }
         }
 
-    }, [active]);
+    }, [active, first]);
 
     return (
         <div className='portrait'>

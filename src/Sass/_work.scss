@@ -1,0 +1,14 @@
+.work {
+    .left {
+        flex: 0.3;
+        margin: 5rem;
+    }
+    .right {
+        flex: 0.7;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
