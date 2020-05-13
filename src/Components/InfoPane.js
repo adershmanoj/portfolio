@@ -4,7 +4,7 @@ const InfoPane = ({ data }) => {
     return (
         <div className='infopane'>
             <div className="infopane__text">
-                {data.map((text) => <p>{text}</p>)}
+                {data.map((text) => <p key={text}>{text}</p>)}
             </div>
         </div>
     )

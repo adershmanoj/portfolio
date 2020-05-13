@@ -22,7 +22,7 @@ const Portrait = () => {
 
     return (
         <div className='portrait'>
-            <PortraitSvg className={active ? 'animate' : null} />
+            <PortraitSvg className={active && 'animate'} />
         </div>
     )
 }

@@ -5,7 +5,7 @@ const Header = ({ first = "", last = "" , height = 300}) => (
         <svg viewBox={"0 0 900 " + height} preserveAspectRatio="xMidYMid meet" width="40rem">
             <symbol id="s-text">
                 <text textAnchor="middle" x="50%" y="50%">{first}</text>
-                {last ? <text textAnchor="middle" x="50%" y="100%">{last}</text> : null}
+                {last && <text textAnchor="middle" x="50%" y="100%">{last}</text>}
             </symbol>
 
             <g className="g-ants">

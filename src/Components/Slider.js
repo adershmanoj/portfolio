@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Header from '../Components/Header';
+
 class Slide extends React.Component {
     constructor(props) {
         super(props)
-
-        this.handleMouseMove = this.handleMouseMove.bind(this)
-        this.handleMouseLeave = this.handleMouseLeave.bind(this)
+        this.xStart = 0;
+        this.xMove = 0;
+        this.handleMouseMove = this.handleMouseMove.bind(this);
+        this.handleMouseLeave = this.handleMouseLeave.bind(this);
         this.handleSlideClick = this.handleSlideClick.bind(this)
-        this.imageLoaded = this.imageLoaded.bind(this)
-        this.slide = React.createRef()
+        this.handleTouchStart = this.handleTouchStart.bind(this);
+        this.handleTouchMove = this.handleTouchMove.bind(this);
+        this.handleTouchEnd = this.handleTouchEnd.bind(this);
+        this.imageLoaded = this.imageLoaded.bind(this);
+        this.slide = React.createRef();
     }
 
     handleMouseMove(event) {
@@ -27,6 +33,23 @@ class Slide extends React.Component {
         this.props.handleSlideClick(this.props.slide.index)
     }
 
+    handleTouchStart(event) {
+        this.xStart = event.nativeEvent.touches[0].clientX;
+    }
+
+    handleTouchMove(event) {
+        this.xMove = event.nativeEvent.touches[0].clientX;
+    }
+
+    handleTouchEnd(event) {
+        if (this.xStart - this.xMove > 50) {
+            this.props.handleNext(event);
+        }
+        else if (this.xMove - this.xStart > 50) {
+            this.props.handlePrevious(event);
+        }
+    }
+
     imageLoaded(event) {
         event.target.style.opacity = 1
     }
@@ -44,9 +67,12 @@ class Slide extends React.Component {
             <li
                 ref={this.slide}
                 className={classNames}
-                onClick={this.handleSlideClick}
                 onMouseMove={this.handleMouseMove}
                 onMouseLeave={this.handleMouseLeave}
+                onClick={this.handleSlideClick}
+                onTouchStart={this.handleTouchStart}
+                onTouchMove={this.handleTouchMove}
+                onTouchEnd={this.handleTouchEnd}
             >
                 <div className="slide__image-wrapper">
                     <img
@@ -56,11 +82,13 @@ class Slide extends React.Component {
                         onLoad={this.imageLoaded}
                     />
                 </div>
+                {index === 0 ? <Header first='Projects' /> :
+                    <article className="slide__content">
+                        <h2 className="slide__headline">{headline}</h2>
+                        <button className="slide__action btn">{button}</button>
+                    </article>
+                }
 
-                <article className="slide__content">
-                    <h2 className="slide__headline">{headline}</h2>
-                    <button className="slide__action btn">{button}</button>
-                </article>
             </li>
         )
     }
@@ -87,35 +115,34 @@ class Slider extends React.Component {
     }
 
     handlePreviousClick() {
-        const previous = this.state.current - 1
+        const { current } = this.state;
+        const previous = current === 0 ? this.props.slides.length - 1 : current - 1
 
         this.setState({
-            current: (previous < 0)
-                ? this.props.slides.length - 1
-                : previous
-        })
+            current: previous
+        }, this.props.callback(previous))
     }
 
     handleNextClick() {
-        const next = this.state.current + 1;
+        const { current } = this.state;
+        const next = current === this.props.slides.length - 1 ? 0 : current + 1;
 
         this.setState({
-            current: (next === this.props.slides.length)
-                ? 0
-                : next
-        })
+            current: next
+        }, this.props.callback(next));
     }
 
     handleSlideClick(index) {
+
         if (this.state.current !== index) {
             this.setState({
                 current: index
-            })
+            }, this.props.callback(index));
         }
     }
 
     render() {
-        const { current, direction } = this.state
+        const { current } = this.state
         const { slides, heading } = this.props
         const headingId = `slider-heading__${heading.replace(/\s+/g, '-').toLowerCase()}`
         const wrapperTransform = {
@@ -127,16 +154,16 @@ class Slider extends React.Component {
                 <ul className="slider__wrapper" style={wrapperTransform}>
                     <h3 id={headingId} className="visuallyhidden">{heading}</h3>
 
-                    {slides.map(slide => {
-                        return (
-                            <Slide
-                                key={slide.index}
-                                slide={slide}
-                                current={current}
-                                handleSlideClick={this.handleSlideClick}
-                            />
-                        )
-                    })}
+                    {slides.map(slide =>
+                        <Slide
+                            key={slide.index}
+                            slide={slide}
+                            current={current}
+                            handleSlideClick={this.handleSlideClick}
+                            handleNext={this.handleNextClick}
+                            handlePrevious={this.handlePreviousClick}
+                        />
+                    )}
                 </ul>
 
                 <div className="slider__controls">
