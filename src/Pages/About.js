@@ -12,7 +12,10 @@ function About() {
     return (
         <div className='container about'>
             <div className='left'>
-                <InfoPane data={["Hello,", "World!", "I'M ADERSH"]} />
+                <InfoPane>
+                    <p>HELLO,<br />WORLD!</p>    
+                    <p>I'M ADERSH</p>   
+                </InfoPane>
             </div>
             <div className='right'>
                 <Header first="About Me" />

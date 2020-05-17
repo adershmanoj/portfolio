@@ -27,6 +27,5 @@ $stroke-step: 7%;
 @keyframes stroke-offset {
     50% {
         stroke-dashoffset: $stroke-step * $max;
-        // stroke-dasharray:  1rem $stroke-step * $max * 2.5;
     }
 }

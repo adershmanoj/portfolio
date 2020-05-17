@@ -1,0 +1,27 @@
+.skills {
+    padding: 0 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+    &--container {
+        @media screen and (min-width: 600px) and (max-width: 799px) {
+            @include flexgrid(2, 1rem);
+        }
+        @media screen and (min-width: 800px) and (max-width: 999px) {
+            @include flexgrid(3, 1rem);
+        }
+        @media screen and (min-width: 1000px) {
+            @include flexgrid(4, 1rem);
+        }
+    }
+    &--skill {
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        box-shadow: 0 2.5px 5px rgba(25, 25, 25, 0.1);
+        border: 1px solid #8080801a;
+        border-radius: 0.5rem;
+    }
+}

@@ -1,10 +1,11 @@
 import React, { memo } from 'react';
 
-const InfoPane = ({ data }) => {
+const InfoPane = ({ children }) => {
     return (
         <div className='infopane'>
             <div className="infopane__text">
-                {data.map((text) => <p key={text}>{text}</p>)}
+                {children}
+                {/* {data.map((text) => <p key={text}>{text}</p>)} */}
             </div>
         </div>
     )
@@ -13,5 +14,5 @@ const InfoPane = ({ data }) => {
 export default memo(InfoPane);
 
 InfoPane.defaultProps = {
-    data: []
+    children: null
 };

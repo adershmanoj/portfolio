@@ -84,8 +84,8 @@ class Slide extends React.Component {
                 </div>
                 {index === 0 ? <Header first='Projects' /> :
                     <article className="slide__content">
-                        <h2 className="slide__headline">{headline}</h2>
-                        <button className="slide__action btn">{button}</button>
+                        {/* <h2 className="slide__headline">{headline}</h2>
+                        <button className="slide__action btn">{button}</button> */}
                     </article>
                 }
 

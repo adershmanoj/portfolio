@@ -5,20 +5,21 @@ import Slider from '../Components/Slider'
 const slideData = [
     {
         index: 0,
-        headline: "Here is a showcase of projects I've worked on.",
+        data: "Here is a showcase of projects I've worked on.",
         src: ''
     },
     {
         index: 1,
-        headline: 'New Fashion Apparel',
+        headline: 'Translate Bot',
         button: 'Visit',
-        src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg'
+        src: 'translatebot.gif',
+        data: "Spring MVC app to translate documents with MySQL database and Hibernate ORM. Won first place at Nissan Digithon hackathon."
     },
     {
         index: 2,
         headline: 'In The Wilderness',
         button: 'Visit',
-        src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/forest.jpg'
+        src: 'notes.jpg'
     },
     {
         index: 3,
@@ -40,7 +41,10 @@ function Work() {
     return (
         <div className='container work'>
             <div className='left'>
-                <InfoPane data={[slideData[index].headline]} />
+                <InfoPane>
+                    <h4>{slideData[index].headline}</h4>
+                    <p style={{textAlign:'left'}}>{slideData[index].data}</p>
+                </InfoPane>
             </div>
             <div className='right'>
                 <Slider heading="Work" slides={slideData} callback={setIndex} />
