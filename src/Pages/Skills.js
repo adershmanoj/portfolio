@@ -5,20 +5,29 @@ function Skills() {
         <div className='skills'>
             <div className='skills--header'>Skills</div>
             <div className='skills--container'>
-                <div className='skills--skill'>
-                    babu
+                <div className='skill'>
+                    <div className='skill--logo'><img src='javascript.png' alt='javascript' /></div>
+                    <div className='skill--info'>
+                        <h4>Web Development</h4>
+                        <h3>Javascript</h3>
+                    </div>
                 </div>
-                <div className='skills--skill'>
-                    babu
+                <div className='skill'>
+                    <div className='skill--logo'><img src='javascript.png' alt='javascript' /></div>
+                    <div className='skill--info'>
+                        <h4>Web Development</h4>
+                        <h3>Javascript</h3>
+                    </div>
                 </div>
-                <div className='skills--skill'>
-                    babu
+                <div className='skill'>
+                    <div className='skill--logo'><img src='javascript.png' alt='javascript' /></div>
+                    <div className='skill--info'>
+                        <h4>Web Development</h4>
+                        <h3>Javascript</h3>
+                    </div>
                 </div>
-                <div className='skills--skill'>
-                    babu
                 </div>
             </div>
-        </div>
     )
 }
 

@@ -5,23 +5,56 @@
     height: 100vh;
     &--container {
         @media screen and (min-width: 600px) and (max-width: 799px) {
-            @include flexgrid(2, 1rem);
+            @include flexgrid(2, 2rem);
         }
         @media screen and (min-width: 800px) and (max-width: 999px) {
-            @include flexgrid(3, 1rem);
+            @include flexgrid(3, 2rem);
         }
         @media screen and (min-width: 1000px) {
-            @include flexgrid(4, 1rem);
+            @include flexgrid(4, 2rem);
         }
     }
-    &--skill {
-        padding: 2rem;
+    & .skill {
+        padding: 1rem 0;
         display: flex;
-        align-items: center;
-        justify-content: center;
         margin-bottom: 1rem;
         box-shadow: 0 2.5px 5px rgba(25, 25, 25, 0.1);
         border: 1px solid #8080801a;
         border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        font-size: $font-size;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover {
+            border-color: #8080804d;
+        }
+        &:hover .skill--info{
+            transition: color 0.3s ease;
+            color: $color-secondary-light;
+        }
+        &:hover .skill--logo{
+            transition: opacity 0.3s ease;
+            opacity: 0.9;
+        }
+        &--logo {
+            flex: 0.3;
+            text-align: center;
+        }
+        &--info {
+            & h4 {
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                margin: 0 0 0.75rem 0;
+                border-bottom: 0.125rem solid #ebebeb;
+                letter-spacing: 0.0625rem;
+                padding: 0 0 0.25rem 0;
+                color: $color-grey-dark-2;
+            }
+            & h3 {
+                line-height: 1.4;
+                margin: 0 0 0.5rem 0;
+            }
+        }
     }
 }
