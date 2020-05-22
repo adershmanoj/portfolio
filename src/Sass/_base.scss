@@ -25,14 +25,24 @@ body {
   box-sizing: border-box;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   color: $color-white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 ::selection {
   background-color: $color-primary;
   color: $color-white;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1em;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25em;
+    height: 0.14em;
+    width: 3em;
+    background: $color-secondary-light;
+  }
 }
