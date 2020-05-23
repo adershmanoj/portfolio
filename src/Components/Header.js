@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-const Header = ({ first = "", last = "" , height = 300}) => (
+const Header = ({ first, last, height = 300}) => (
     <div className='header'>
         <svg viewBox={"0 0 900 " + height} preserveAspectRatio="xMidYMid meet" width="40rem">
             <symbol id="s-text">

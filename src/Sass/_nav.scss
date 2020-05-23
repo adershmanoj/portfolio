@@ -1,0 +1,134 @@
+nav {
+  animation: nav 0.2s ease-in-out forwards;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 30em;
+  opacity: 0;
+  padding: 3em;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 1em;
+  }
+}
+
+nav a {
+  color: white;
+  font-weight: 700;
+  margin: 0 2em;
+  letter-spacing: 0.08em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  nav a {
+    margin: 0 1em;
+  }
+}
+
+@keyframes navdot {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav a:before {
+  border-radius: 50%;
+  content: "";
+  background-color: #ff5252;
+  left: 0;
+  height: 10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-200%, -50%);
+  width: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  nav a:before {
+    bottom: 150%;
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+nav a.active:before {
+  animation: navdot 0.25s ease-in-out forwards 0.25s;
+}
+
+@keyframes nav {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -25px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  40% {
+    transform: rotateZ(17deg);
+  }
+  60% {
+    transform: rotateZ(16deg);
+  }
+  100% {
+    transform: translateY(100%) rotateZ(17deg);
+  }
+}
+
+.page {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+}
+
+// .page-enter {
+//   opacity: 0;
+// }
+
+// .page-enter-active {
+//   opacity: 1;
+//     transform: scale(1.01);
+//   transition: opacity 300ms, transform 300ms;
+// }
+
+// .page-exit {
+//   opacity: 1;
+//   transform: scale(1);
+// }
+
+// .page-exit-active {
+//   opacity: 0;
+//   transform: scale(0.9);
+//   transition: opacity 300ms, transform 300ms;
+// }
+
+.page-enter {
+  opacity: 0;
+}
+.page-enter-active {
+  opacity: 1;
+  transform: scale(0.8);
+  transition: opacity 1000ms, transform 700ms ease;
+}
+.page-exit-active {
+  animation: fall 1000ms ease-out;
+}

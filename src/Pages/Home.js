@@ -28,7 +28,7 @@ function Home() {
                 <Header first="ADERSH" last="MANOJ" height="500" />
                 <div className='code'>
                     <p><code className='code--darkblue'>const</code> <code className='code--lightblue'>adersh</code>: <code className='code--green'>Array</code>&lt;<code className='code--green'>Interests</code>&gt;;</p>
-                    <p><code className='code--lightblue'>adersh</code>.<code className='code--yellow'>push</code>(<Typewriter callback={setIndex}{...typewriterSettings} className='code--red' text={interests} />);</p>
+                    <div><code className='code--lightblue'>adersh</code>.<code className='code--yellow'>push</code>(<Typewriter callback={setIndex}{...typewriterSettings} className='code--red' text={interests} />);</div>
                     <div className='code__block'>
                         [ {returncurrentInterests()}]
                     </div>

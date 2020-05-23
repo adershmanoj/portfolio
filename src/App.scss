@@ -1,18 +1,20 @@
-@import './Sass/variables';
-@import './Sass/mixins';
-@import './Sass/base';
-@import './Sass/portrait';
-@import './Sass/header';
-@import './Sass/infopane';
-@import './Sass/typewriter';
-@import './Sass/slider';
-@import './Sass/home';
-@import './Sass/about';
-@import './Sass/work';
-@import './/Sass/skills';
+@import "./Sass/variables";
+@import "./Sass/mixins";
+@import "./Sass/base";
+@import "./Sass/portrait";
+@import "./Sass/header";
+@import "./Sass/infopane";
+@import "./Sass/typewriter";
+@import "./Sass/slider";
+@import "./Sass/nav";
+@import "./Sass/home";
+@import "./Sass/about";
+@import "./Sass/work";
+@import ".//Sass/skills";
 
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -48,8 +50,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.container {
-  height: 100vh;
 }
