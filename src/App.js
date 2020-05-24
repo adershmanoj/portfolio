@@ -11,20 +11,22 @@ import Skills from "./Pages/Skills";
 
 const routes = [
   { path: '/', name: 'Home', Component: Home },
-  { path: '/about', name: 'About', Component: About }
+  { path: '/about', name: 'About', Component: About },
+  { path: '/projects', name: 'Projects', Component: Work },
+  { path: '/skills', name: 'Skills', Component: Skills }
 ]
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Nav />
+        <Nav routes={routes}/>
         {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path}>
               {({ match }) => (
                 <CSSTransition
                   in={match != null}
-                  timeout={1000}
+                  timeout={500}
                   classNames="page"
                   unmountOnExit
                 >
