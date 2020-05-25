@@ -2,6 +2,7 @@
   padding: 3rem;
   display: flex;
   flex-flow: column wrap;
+  text-align: left;
   &--container {
     @media screen and (min-width: 600px) and (max-width: 799px) {
       @include flexgrid(2, 2rem);
@@ -62,6 +63,7 @@
   padding: 0 3rem;
   display: flex;
   flex-flow: column wrap;
+  text-align: left;
   & .language {
     font-family: "Open Sans", sans-serif;
     font-size: 2rem;
