@@ -6,12 +6,13 @@
 @import "./Sass/infopane";
 @import "./Sass/typewriter";
 @import "./Sass/slider";
+@import "./Sass/timelines";
 @import "./Sass/nav";
 @import "./Sass/home";
 @import "./Sass/about";
 @import "./Sass/work";
 @import ".//Sass/skills";
-
+@import ".//Sass/experience";
 .App {
   text-align: center;
   position: relative;

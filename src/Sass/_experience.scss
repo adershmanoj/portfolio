@@ -1,0 +1,11 @@
+.experience {
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+    @include flexgrid(1, 2rem);
+  }
+  @media screen and (min-width: 800px) and (max-width: 999px) {
+    @include flexgrid(2, 2rem);
+  }
+  @media screen and (min-width: 1000px) {
+    @include flexgrid(2, 2rem);
+  }
+}

@@ -1,4 +1,6 @@
-$colors: #360745, #d61c59, #e7d84b, #efeac5, #1b8798;
+// $colors: #360745, #d61c59, #e7d84b, #efeac5, #1b8798;
+$colors: $color-code-green, $color-code-yellow,  $color-code-brown, $color-tertiary-light, $color-tertiary-dark;
+
 $max: 5;
 $stroke-step: 7%;
 
@@ -12,7 +14,7 @@ $stroke-step: 7%;
         stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
         stroke-width: 3px;
 
-        animation: stroke-offset 5s linear infinite forwards;
+        animation: stroke-offset 7s linear infinite forwards;
 
         @for $item from 1 through $max {
             $stroke-color: nth($colors, $item);

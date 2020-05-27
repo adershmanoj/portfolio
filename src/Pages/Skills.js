@@ -2,53 +2,79 @@ import React, { memo, useState } from "react";
 import FadeIn from "react-fade-in";
 import Typewriter from "../Components/Typewriter";
 
-const skills = [
+const data = [
   {
-    name: "React",
-    category: "Web Development",
-    logo: "react.png",
+    name: "Skills",
+    data: [
+      {
+        name: "React",
+        category: "Web Development",
+        logo: "react.png",
+      },
+      {
+        name: "JavaScript",
+        category: "Web Development",
+        logo: "javascript.png",
+      },
+      {
+        name: "Java",
+        category: "Backend",
+        logo: "java.png",
+      },
+      {
+        name: "Spring",
+        category: "Backend",
+        logo: "spring.png",
+      },
+      {
+        name: "Python",
+        category: "Backend / Scripting",
+        logo: "python.png",
+      },
+      {
+        name: "MySQL",
+        category: "Database Management",
+        logo: "mysql.png",
+      },
+      {
+        name: "Docker",
+        category: "DevOps",
+        logo: "docker.png",
+      },
+      {
+        name: "AWS",
+        category: "DevOps",
+        logo: "aws.png",
+      },
+      {
+        name: "Agile",
+        category: "Software Development",
+        logo: "agile.png",
+      },
+    ],
   },
   {
-    name: "JavaScript",
-    category: "Web Development",
-    logo: "javascript.png",
-  },
-  {
-    name: "Java",
-    category: "Backend",
-    logo: "java.png",
-  },
-  {
-    name: "Spring",
-    category: "Backend",
-    logo: "spring.png",
-  },
-  {
-    name: "Python",
-    category: "Backend / Scripting",
-    logo: "python.png",
-  },
-  {
-    name: "MySQL",
-    category: "Database Management",
-    logo: "mysql.png",
-  },
-  {
-    name: "Docker",
-    category: "DevOps",
-    logo: "docker.png",
-  },
-  {
-    name: "AWS",
-    category: "DevOps",
-    logo: "aws.png",
-  },
-  {
-    name: "Agile",
-    category: "Software Development",
-    logo: "agile.png",
+    name: "Certifications",
+    data: [
+      {
+        name: "Cloud Architecture with GCP Specialization",
+        category: "Coursera",
+        logo: "coursera.png",
+      },
+      {
+        name: "eLearnSecurity Junior Penetration Tester",
+        category: "eLearnSecurity",
+        logo: "ejpt.png"
+      },
+      {
+        name: "Advanced JAVA",
+        category: "Simplilearn",
+        logo: "simplilearn.png"
+      }
+    ],
   },
 ];
+
 const language = {
   languageText: [
     "I am fluent in English.",
@@ -67,22 +93,24 @@ function Skills() {
   const [index, setIndex] = useState(0);
   return (
     <div className="container">
-      <div className="skills">
-        <h1 className="title">Skills</h1>
-        <div className="skills--container">
-          {skills.map((skill) => (
-            <div className="skill">
-              <div className="skill--logo">
-                <img src={"./icons/" + skill.logo} alt={skill.name} />
+      {data.map((item) => (
+        <div className="skills">
+          <h1 className="title">{item.name}</h1>
+          <div className="skills--container">
+            {item.data?.map((skill) => (
+              <div className="card skill">
+                <div className="skill--logo">
+                  <img src={"./icons/" + skill.logo} alt={skill.name} />
+                </div>
+                <div className="skill--info">
+                  <h4>{skill.category}</h4>
+                  <h3>{skill.name}</h3>
+                </div>
               </div>
-              <div className="skill--info">
-                <h4>{skill.category}</h4>
-                <h3>{skill.name}</h3>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      ))}
       <div className="languages">
         <h1 className="title">LANGUAGES</h1>
         <div className="language">

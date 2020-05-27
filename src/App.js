@@ -8,12 +8,15 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Work from "./Pages/Work";
 import Skills from "./Pages/Skills";
+import Experience from "./Pages/Experience";
 
 const routes = [
   { path: '/', name: 'Home', Component: Home },
   { path: '/about', name: 'About', Component: About },
   { path: '/projects', name: 'Projects', Component: Work },
-  { path: '/skills', name: 'Skills', Component: Skills }
+  { path: '/skills', name: 'Skills', Component: Skills },
+  { path: '/experience', name: 'Experience', Component: Experience }
+
 ]
 
 function App() {
