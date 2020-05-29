@@ -1,6 +1,4 @@
-import React, { memo, useState } from "react";
-import FadeIn from "react-fade-in";
-import Typewriter from "../Components/Typewriter";
+import React, { memo } from "react";
 
 const data = [
   {
@@ -64,33 +62,43 @@ const data = [
       {
         name: "eLearnSecurity Junior Penetration Tester",
         category: "eLearnSecurity",
-        logo: "ejpt.png"
+        logo: "ejpt.png",
       },
       {
         name: "Advanced JAVA",
         category: "Simplilearn",
-        logo: "simplilearn.png"
-      }
+        logo: "simplilearn.png",
+      },
+    ],
+  },
+  {
+    name: "Achievements",
+    data: [
+      {
+        name: "Nissan Digithon '19",
+        category: "Nissan Digital",
+        logo: "first.png",
+      },
+      {
+        name: "UI / UX Challenge '18",
+        category: "College of Engineering, TVM",
+        logo: "first.png",
+      },
+      {
+        name: "Web Design Challenge '18",
+        category: "Computer Society of India, TVM",
+        logo: "second.png",
+      },
+      {
+        name: "Hash Hackathon '18",
+        category: "MBCET, TVM",
+        logo: "third.png",
+      },
     ],
   },
 ];
 
-const language = {
-  languageText: [
-    "I am fluent in English.",
-    "നാട്ടിൽ എവിടെയാ ?",
-    "मैं कठिनाई से हिंदी बोल सकता हूं.",
-    "¿Hola! Cómo estás?",
-  ],
-  languageDescription: [
-    "It's my preferred medium of communication.",
-    "Malayalam is my native language.",
-    "I can speak a bit of Hindi.",
-    "I've been learning Spanish for a year.",
-  ],
-};
 function Skills() {
-  const [index, setIndex] = useState(0);
   return (
     <div className="container">
       {data.map((item) => (
@@ -111,22 +119,6 @@ function Skills() {
           </div>
         </div>
       ))}
-      <div className="languages">
-        <h1 className="title">LANGUAGES</h1>
-        <div className="language">
-          <Typewriter
-            text={language.languageText}
-            speed="50"
-            callback={setIndex}
-          />
-          <FadeIn
-            className="language__caption"
-            key={language.languageDescription[index - 1]}
-          >
-            {language.languageDescription[index - 1]}
-          </FadeIn>
-        </div>
-      </div>
     </div>
   );
 }

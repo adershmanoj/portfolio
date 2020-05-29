@@ -1,18 +1,31 @@
 .about {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .left {
+    flex: 0.3;
+  }
+  .right {
+    flex: 0.7;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    .left {
-        flex: 0.3;
-    }
-    .right {
-        flex: 0.7;
-        display: flex;
-        flex-direction: column;
-    }
-    &--text {
+    flex-direction: column;
+  }
+  &--text {
+    font-size: $font-size;
+    text-align: justify;
+    line-height: 1.6;
+  }
+  .languages {
+    text-align: left;
+    & .language {
+      font-family: "Open Sans", sans-serif;
+      font-size: 2rem;
+      &__caption {
+        padding: 2rem 0;
+        color: $color-subtext-2;
         font-size: $font-size;
-        text-align: justify;
-        line-height: 1.6;
+        font-style: italic;
+      }
     }
+  }
 }

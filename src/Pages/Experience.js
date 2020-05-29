@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, Fragment } from "react";
 import Timeline from "../Components/Timeline";
 
 const data = {
@@ -23,34 +23,17 @@ const data = {
     {
       duration: "2014 - 2018",
       heading: "Kerala University",
-      subHeading: "B.Tech, Computer Science & Engineering",
+      description: "Bachelor's degree , Computer Science & Engineering",
     },
     {
       duration: "2012-2014",
       heading: "Loyola School",
-      subHeading: "High School, ISC",
+      description: "High School, ISC",
     },
     {
-      duration: "2000 - 2012",
+      duration: "2002 - 2012",
       heading: "Loyola School",
-      subHeading: "Primary School, ICSE",
-    },
-  ],
-  certifications: [
-    {
-      duration: "2020",
-      heading: "Cloud Architecture with Google Cloud Specialization",
-      subHeading: "Coursera",
-    },
-    {
-      duration: "2019",
-      heading: "eLearnSecurity Junior Penetration Tester ",
-      subHeading: "eLearnSecurity",
-    },
-    {
-      duration: "2020",
-      heading: "Advanced JAVA",
-      subHeading: "Simplilearn",
+      description: "Primary School, ICSE",
     },
   ],
 };
@@ -58,8 +41,12 @@ const data = {
 function Experience() {
   return (
     <div className="experience">
-      <Timeline data={data.education} />
-      <Timeline data={data.experience} />
+      {Object.keys(data)?.map((item) => (
+        <div>
+          {/* <h1 className="title">{item}</h1> */}
+          <Timeline data={data[item]} />
+        </div>
+      ))}
     </div>
   );
 }

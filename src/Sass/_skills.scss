@@ -16,7 +16,6 @@
   }
 
   & .skill {
-    
     &:hover {
       border-color: #8080804d;
     }
@@ -41,6 +40,7 @@
         letter-spacing: 0.0625rem;
         padding: 0 0 0.25rem 0;
         color: $color-grey-dark-2;
+        width: fit-content;
       }
       & h3 {
         line-height: 1.4;
@@ -48,21 +48,4 @@
       }
     }
   }
-}
-.languages {
-  padding: 0 3rem;
-  display: flex;
-  flex-flow: column wrap;
-  text-align: left;
-  & .language {
-    font-family: "Open Sans", sans-serif;
-    font-size: 2rem;
-    &__caption {
-      padding: 2rem 0;
-      color: $color-subtext-2;
-      font-size: $font-size;
-      font-style: italic;
-    }
-  }
-  
 }
