@@ -16,6 +16,7 @@
   }
 
   & .skill {
+    font-size: $font-size;
     &:hover {
       border-color: #8080804d;
     }
@@ -45,6 +46,7 @@
       & h3 {
         line-height: 1.4;
         margin: 0 0 0.5rem 0;
+        font-size: $font-size;
       }
     }
   }

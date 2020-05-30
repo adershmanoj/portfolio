@@ -16,15 +16,12 @@
         .fade {
             display: inline-flex;
         }
-        .header {
-            margin-top: 5rem;
-        }
         .code {
             font-size: $font-size;
             font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
             color: $color-white;
             text-align: left;
-            flex: 0.5;
+            flex: 0.6;
             & > * {
                 margin: 2rem;
             }

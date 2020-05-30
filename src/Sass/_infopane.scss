@@ -3,7 +3,6 @@
     margin: 0;
     display: grid;
     place-items: center;
-    font: 2vw system-ui;
 }
 .infopane__text {
     transform: translatey(0px);
@@ -18,7 +17,6 @@
     border-radius: 11px;
     position: relative;
     box-shadow: 20px 20px $color-grey-dark-2;
-    font-family: "Baloo 2", cursive;
 
     & h4 {
         text-decoration: underline;

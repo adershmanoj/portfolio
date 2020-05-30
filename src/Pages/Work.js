@@ -15,7 +15,7 @@ const slideData = [
     src: "translatebot.gif",
     data:
       "Spring MVC app to translate documents with MySQL database and Hibernate ORM. Won first place at Nissan Digithon hackathon.",
-    tags: ["Java", "Spring", "Hibernate", "MySQL", "Azure"],
+    tags: ["Java", "Spring", "Hibernate", "MySQL", "Azure","Spring", "Hibernate", "MySQL", "Azure"],
   },
   {
     index: 2,

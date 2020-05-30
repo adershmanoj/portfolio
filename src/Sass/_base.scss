@@ -40,7 +40,7 @@ body {
   color: $color-white;
 }
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 400;
   margin-bottom: 1em;
   position: relative;
@@ -68,8 +68,6 @@ body {
   cursor: pointer;
 }
 .tag__Group {
-  display: flex;
-  flex-flow: row;
   margin-top: 1rem;
   & .tag__Tag {
     margin: 2px;
