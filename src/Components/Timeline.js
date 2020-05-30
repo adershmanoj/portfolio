@@ -11,6 +11,11 @@ function Timeline({ data }) {
             <h3>{event.heading}</h3>
             <h4>{event.subHeading}</h4>
             <p>{event.description}</p>
+            <p className="tag__Group">
+              {event.tags?.map((tag) => (
+                <span className="tag__Tag">{tag}</span>
+              ))}
+            </p>
           </div>
         </li>
       ))}

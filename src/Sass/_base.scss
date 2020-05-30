@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700);
+// @import url(https://fonts.googleapis.com/css?family=Open + Sans:300, 700);
 *,
 *::after,
 *::before {
@@ -34,7 +34,6 @@ body {
   color: $color-white;
   font-family: "Roboto";
   // font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
 }
 ::selection {
   background-color: $color-primary;
@@ -67,4 +66,21 @@ body {
   font-size: $font-size;
   font-weight: 700;
   cursor: pointer;
+}
+.tag__Group {
+  display: flex;
+  flex-flow: row;
+  margin-top: 1rem;
+  & .tag__Tag {
+    margin: 2px;
+    background-color: rgb(41, 47, 53);
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 4px;
+    padding: 6px 8px;
+    transition: background 0.2s ease-in;
+    color: $color-white;
+  }
 }
