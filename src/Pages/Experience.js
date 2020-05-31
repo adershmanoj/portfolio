@@ -10,7 +10,7 @@ const data = {
       description:
         "Working with the Cyber Security function to provide automation and software development capabilities." +
         "Successfully implemented Spam monitoring solution with sandboxed malware analysis.",
-      tags: ["Cyber Security", "Python", "ArcSight"]
+      tags: ["Cyber Security", "Python", "Selenium", "JavaScript", "Mocha"],
     },
     {
       duration: "July 2018 - September 2018",
@@ -18,6 +18,7 @@ const data = {
       subHeading: "Front End Developer",
       description:
         "Built front end features using ReactJS for data visualization product.",
+      tags: ["React", "Redux", "Plotly", "Styled Components"],
     },
   ],
   education: [

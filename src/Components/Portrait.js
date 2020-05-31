@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useState } from 'react';
-import { ReactComponent as PortraitSvg } from './../crop2.svg';
+import { ReactComponent as PortraitSvg } from './portrait.svg';
 
 
 const Portrait = () => {

@@ -11,7 +11,7 @@
 $bezier: cubic-bezier(0.25, 0.8, 0.25, 1);
 $class: st !default;
 
-@for $i from 0 through 339 {
+@for $i from 0 through 314 {
     svg {
         .#{$class}#{$i} {
             opacity: 0;

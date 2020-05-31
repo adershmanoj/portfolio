@@ -1,0 +1,44 @@
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1em;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25em;
+    height: 0.14em;
+    width: 3em;
+    background: $color-secondary-light;
+  }
+}
+
+.card {
+  padding: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
+  box-shadow: 0 2.5px 5px rgba(25, 25, 25, 0.1);
+  border: 1px solid #8080801a;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: $font-size;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tag__Group {
+  margin-top: 1rem;
+  & .tag__Tag {
+    margin: 2px;
+    background-color: rgb(41, 47, 53);
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 4px;
+    padding: 6px 8px;
+    transition: background 0.2s ease-in;
+    color: $color-white;
+  }
+}
