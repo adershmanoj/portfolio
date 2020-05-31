@@ -1,30 +1,33 @@
-import React from "react";
+import React, { Suspense, useEffect } from "react";
 import "./App.scss";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Transition, TransitionGroup,CSSTransition } from "react-transition-group";
-
+import lazy from "react-lazy-with-preload";
+import { BrowserRouter, Route } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 import Nav from "./Components/Nav";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Work from "./Pages/Work";
-import Skills from "./Pages/Skills";
-import Experience from "./Pages/Experience";
 
-const routes = [
-  { path: '/', name: 'Home', Component: Home },
-  { path: '/about', name: 'About', Component: About },
-  { path: '/projects', name: 'Projects', Component: Work },
-  { path: '/skills', name: 'Skills', Component: Skills },
-  { path: '/experience', name: 'Experience', Component: Experience }
+let routes = [
+  { path: "/", name: "Home" },
+  { path: "/about", name: "About" },
+  { path: "/projects", name: "Projects" },
+  { path: "/skills", name: "Skills" },
+  { path: "/experience", name: "Experience" },
+];
 
-]
+routes.map(
+  (route) => (route.Component = lazy(() => import(`./Pages/${route.name}`)))
+);
 
 function App() {
+  useEffect(() => {
+    //preload
+    routes.map(({ Component }) => Component.preload());
+  });
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Nav routes={routes}/>
-        {routes.map(({ path, Component }) => (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BrowserRouter>
+        <div className="App">
+          <Nav routes={routes} />
+          {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path}>
               {({ match }) => (
                 <CSSTransition
@@ -40,8 +43,9 @@ function App() {
               )}
             </Route>
           ))}
-      </div>
-    </BrowserRouter>
+        </div>
+      </BrowserRouter>
+    </Suspense>
   );
 }
 

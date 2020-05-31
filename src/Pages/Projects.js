@@ -37,7 +37,7 @@ const slideData = [
   },
 ];
 
-function Work() {
+function Projects() {
   const [index, setIndex] = useState(0);
 
   return (
@@ -59,4 +59,4 @@ function Work() {
     </div>
   );
 }
-export default memo(Work);
+export default memo(Projects);

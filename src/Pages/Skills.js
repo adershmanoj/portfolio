@@ -102,7 +102,7 @@ function Skills() {
   return (
     <div className="container">
       {data.map((item) => (
-        <div className="skills">
+        <div key={item.name} className="skills">
           <h1 className="title">{item.name}</h1>
           <div className="skills--container">
             {item.data?.map((skill) => (
