@@ -10,7 +10,7 @@ const data = {
       description:
         "Working with the Cyber Security function to provide automation and software development capabilities." +
         "Successfully implemented Spam monitoring solution with sandboxed malware analysis.",
-      tags: ["Cyber Security", "Python", "Selenium", "JavaScript", "Mocha"],
+      tags: ["Cyber Security", "Python", "Selenium", "JavaScript", "Bash"],
     },
     {
       duration: "July 2018 - September 2018",
