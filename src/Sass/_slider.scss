@@ -63,8 +63,7 @@
 .slider__controls {
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: calc(100% + 1rem);
+  margin-top: 1rem;
   
   .btn {
     --size: 3rem;

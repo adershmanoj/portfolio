@@ -1,7 +1,7 @@
 @import "./Sass/variables";
 @import "./Sass/mixins";
 @import "./Sass/base";
-@import './Sass/common';
+@import "./Sass/common";
 @import "./Sass/portrait";
 @import "./Sass/header";
 @import "./Sass/infopane";
@@ -18,5 +18,6 @@
 .App {
   text-align: center;
   position: relative;
+  display: flex;
+  flex-flow: column;
 }
-

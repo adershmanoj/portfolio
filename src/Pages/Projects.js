@@ -15,14 +15,18 @@ const slideData = [
     src: "translatebot.gif",
     data:
       "Spring MVC app to translate documents with MySQL database and Hibernate ORM. Won first place at Nissan Digithon hackathon.",
-    tags: ["Java", "Spring", "Hibernate", "MySQL", "Azure","Spring", "Hibernate", "MySQL", "Azure"],
+    tags: ["Java", "Spring", "Hibernate", "MySQL", "Azure"],
   },
   {
     index: 2,
-    headline: "In The Wilderness",
+    headline: "Notes App",
     button: "Visit",
     src: "notes.jpg",
-  },
+    data:
+      "Note application designed for note taking, organizing, and task management. Securely store personal and work notes on the cloud.",
+      tags: ["React", "Meteor", "MongoDB"],
+
+    },
   {
     index: 3,
     headline: "For Your Current Mood",
@@ -46,7 +50,7 @@ function Projects() {
         <InfoPane>
           <h4>{slideData[index].headline}</h4>
           <p style={{ textAlign: "left" }}>{slideData[index].data}</p>
-          <p className='tag__Group'>
+          <p className="tag__Group">
             {slideData[index].tags?.map((tag) => (
               <span className="tag__Tag">{tag}</span>
             ))}
