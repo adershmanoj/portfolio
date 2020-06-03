@@ -2,42 +2,66 @@ import React, { memo, useState } from "react";
 import InfoPane from "../Components/InfoPane";
 import Slider from "../Components/Slider";
 
+const imageFolder = "/projects/";
 const slideData = [
   {
     index: 0,
-    data: "Here is a showcase of projects I've worked on.",
-    src: "",
+    data:
+      "Here is a showcase of projects I've worked on. You can find more on GitHub.",
+    headline: "Projects",
+    github: "https://github.com/adershmanoj"
   },
   {
     index: 1,
     headline: "Translate Bot",
     button: "Visit",
-    src: "translatebot.gif",
+    src: imageFolder + "translatebot.gif",
     data:
       "Spring MVC app to translate documents with MySQL database and Hibernate ORM. Won first place at Nissan Digithon hackathon.",
     tags: ["Java", "Spring", "Hibernate", "MySQL", "Azure"],
+    link: "https://translate-bot-hackathon.herokuapp.com"
   },
   {
     index: 2,
     headline: "Notes App",
     button: "Visit",
-    src: "notes.jpg",
+    src: imageFolder + "notes.jpg",
     data:
       "Note application designed for note taking, organizing, and task management. Securely store personal and work notes on the cloud.",
-      tags: ["React", "Meteor", "MongoDB"],
-
-    },
+    tags: ["React", "Meteor", "MongoDB", "Enzyme", "Heroku"],
+    github: "https://github.com/adershmanoj/notes-meteor",
+    link: "https://notes-adershmanoj.herokuapp.com"
+  },
   {
     index: 3,
-    headline: "For Your Current Mood",
+    headline: "URL Shortener",
     button: "Visit",
-    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/guitar.jpg",
+    src: imageFolder + "shortlink.jpg",
+    data: "Link shortener application to save links and track visit counts.",
+    tags: ["React", "Meteor", "MongoDB", "Heroku"],
+    github: "https://github.com/adershmanoj/short-link-meteor",
+    link: "https://short-link-adershmanoj.herokuapp.com"
   },
   {
     index: 4,
-    headline: "Focus On The Writing",
+    headline: "Jobfair 2018",
     button: "Visit",
-    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/typewriter.jpg",
+    src: imageFolder + "jobfair.jpg",
+    data:
+      "SCT Jobfair is the annual inter college placement event conducted by SCT College of Engineerning.",
+    tags: ["HTML", "JS", "CSS"],
+    github: "https://github.com/adershmanoj/SCT-Jobfair",
+    link: "http://adershmanoj.me/SCT-Jobfair"
+  },
+  {
+    index: 5,
+    headline: "Trillo",
+    button: "Visit",
+    src: imageFolder + "trillo.jpg",
+    data: "Travel agency website mockup built with Flexbox and CSS Grid.",
+    tags: ["HTML", "JS", "Sass"],
+    github: "https://github.com/adershmanoj/trillo",
+    link: "http://adershmanoj.me/trillo"
   },
 ];
 
@@ -55,6 +79,10 @@ function Projects() {
               <span className="tag__Tag">{tag}</span>
             ))}
           </p>
+          <div className='icon__Group'>
+            {slideData[index].github && <a rel="noopener noreferrer" target="_blank" href={slideData[index].github}><img alt = 'Github' src = '/icons/github.png' /></a>}
+            {slideData[index].link && <a rel="noopener noreferrer" target="_blank" href={slideData[index].link}><img alt = 'Github' src = '/icons/link.png' /></a>}          </div>
+
         </InfoPane>
       </div>
       <div className="right">

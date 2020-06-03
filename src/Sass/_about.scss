@@ -19,11 +19,12 @@
   }
   .languages {
     text-align: left;
+    padding: 1rem 0;
     & .language {
       font-family: "Open Sans", sans-serif;
-      font-size: 2rem;
+      font-size: $font-size;
       &__caption {
-        padding: 2rem 0;
+        padding: 1rem 0;
         color: $color-subtext-2;
         font-size: $font-size;
         font-style: italic;

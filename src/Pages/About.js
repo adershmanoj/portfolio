@@ -51,18 +51,26 @@ function About() {
             This website was made to showcase my skills and love for software
             development.
           </p>
-          <p>todo: soft skills</p>
-        </div>
-        <div className="languages">
-          <div className="language">
-            <Typewriter text={language.text} speed="50" callback={setIndex} />
-            <FadeIn
-              className="language__caption"
-              key={language.caption[index - 1]}
-            >
-              {language.caption[index - 1]}
-            </FadeIn>
+          <p>
+            <br />I enjoy taking on responsibility and solving problems through
+            collaboration. Communication is a key competency for me and my
+            language skills include the below languages.
+          </p>
+          <div className="languages">
+            <div className="language">
+              <Typewriter text={language.text} speed="50" callback={setIndex} />
+              <FadeIn
+                className="language__caption"
+                key={language.caption[index - 1]}
+              >
+                {language.caption[index - 1]}
+              </FadeIn>
+            </div>
           </div>
+          <p>
+            If you are looking for a talented developer and is impressed by what
+            you see here, feel free to reach out to me at: <a href="mailto:hi@adershmanoj.dev">hi@adershmanoj.dev</a>  
+          </p>
         </div>
       </div>
     </div>

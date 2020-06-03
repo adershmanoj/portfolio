@@ -1,18 +1,27 @@
 .work {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .left {
+    flex: 0.4;
+    margin: 5rem;
+
+    & .icon__Group {
+      margin: 1rem;
+      margin-bottom: 0;
+
+      & > a {
+        margin: 2px;
+      }
+    }
+  }
+  .right {
+    flex: 0.6;
+    overflow: hidden;
     display: flex;
     justify-content: center;
-    text-align: center;
-    .left {
-        flex: 0.4;
-        margin: 5rem;
-    }
-    .right {
-        flex: 0.6;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: column;
-    }
+    align-items: center;
+    flex-flow: column;
+  }
 }
