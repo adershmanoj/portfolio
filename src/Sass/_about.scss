@@ -4,6 +4,7 @@
   text-align: center;
   .left {
     flex: 0.3;
+    color: $color-grey-dark-3;
   }
   .right {
     flex: 0.7;
@@ -13,20 +14,20 @@
     padding: 3rem;
   }
   &--text {
-    font-size: $font-size;
     text-align: justify;
-    line-height: 1.6;
-    &__bold, &__heading {
+    &__bold,
+    &__heading,
+    &__link {
       font-size: 2rem;
       color: $color-subtext-1;
+      font-weight: bold;
     }
     &__heading {
       margin-bottom: 1rem;
     }
     &__link {
-      color: $color-subtext-1;
-      font-weight: bold;
       text-decoration: none;
+      font-size: $font-size;
     }
   }
   .languages {
@@ -34,11 +35,9 @@
     padding: 1rem 0;
     & .language {
       font-family: "Open Sans", sans-serif;
-      font-size: $font-size;
       &__caption {
         padding: 1rem 0;
         color: $color-subtext-2;
-        font-size: $font-size;
         font-style: italic;
       }
     }

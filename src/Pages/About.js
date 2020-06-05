@@ -26,7 +26,7 @@ function About() {
   return (
     <div className="container about">
       <div className="left">
-        <InfoPane>
+        <InfoPane className="infopane__text">
           <p>
             HELLO,
             <br />

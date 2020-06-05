@@ -9,7 +9,7 @@ const slideData = [
     data:
       "Here is a showcase of projects I've worked on. You can find more on GitHub.",
     headline: "Projects",
-    github: "https://github.com/adershmanoj"
+    github: "https://github.com/adershmanoj",
   },
   {
     index: 1,
@@ -19,7 +19,7 @@ const slideData = [
     data:
       "Spring MVC app to translate documents with MySQL database and Hibernate ORM. Won first place at Nissan Digithon hackathon.",
     tags: ["Java", "Spring", "Hibernate", "MySQL", "Azure"],
-    link: "https://translate-bot-hackathon.herokuapp.com"
+    link: "https://translate-bot-hackathon.herokuapp.com",
   },
   {
     index: 2,
@@ -30,7 +30,7 @@ const slideData = [
       "Note application designed for note taking, organizing, and task management. Securely store personal and work notes on the cloud.",
     tags: ["React", "Meteor", "MongoDB", "Enzyme", "Heroku"],
     github: "https://github.com/adershmanoj/notes-meteor",
-    link: "https://notes-adershmanoj.herokuapp.com"
+    link: "https://notes-adershmanoj.herokuapp.com",
   },
   {
     index: 3,
@@ -40,7 +40,7 @@ const slideData = [
     data: "Link shortener application to save links and track visit counts.",
     tags: ["React", "Meteor", "MongoDB", "Heroku"],
     github: "https://github.com/adershmanoj/short-link-meteor",
-    link: "https://short-link-adershmanoj.herokuapp.com"
+    link: "https://short-link-adershmanoj.herokuapp.com",
   },
   {
     index: 4,
@@ -51,7 +51,7 @@ const slideData = [
       "SCT Jobfair is the annual inter college placement event conducted by SCT College of Engineerning.",
     tags: ["HTML", "JS", "CSS"],
     github: "https://github.com/adershmanoj/SCT-Jobfair",
-    link: "http://adershmanoj.me/SCT-Jobfair"
+    link: "http://adershmanoj.me/SCT-Jobfair",
   },
   {
     index: 5,
@@ -61,7 +61,7 @@ const slideData = [
     data: "Travel agency website mockup built with Flexbox and CSS Grid.",
     tags: ["HTML", "JS", "Sass"],
     github: "https://github.com/adershmanoj/trillo",
-    link: "http://adershmanoj.me/trillo"
+    link: "http://adershmanoj.me/trillo",
   },
 ];
 
@@ -72,17 +72,33 @@ function Projects() {
     <div className="container work">
       <div className="left">
         <InfoPane>
-          <h4>{slideData[index].headline}</h4>
-          <p style={{ textAlign: "left" }}>{slideData[index].data}</p>
+          <h3 className="infopane--heading">{slideData[index].headline}</h3>
+          <p>{slideData[index].data}</p>
           <p className="tag__Group">
             {slideData[index].tags?.map((tag) => (
               <span className="tag__Tag">{tag}</span>
             ))}
           </p>
-          <div className='icon__Group'>
-            {slideData[index].github && <a rel="noopener noreferrer" target="_blank" href={slideData[index].github}><img alt = 'Github' src = '/icons/github.png' /></a>}
-            {slideData[index].link && <a rel="noopener noreferrer" target="_blank" href={slideData[index].link}><img alt = 'Github' src = '/icons/link.png' /></a>}          </div>
-
+          <div className="icon__Group">
+            {slideData[index].github && (
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={slideData[index].github}
+              >
+                <img alt="Github" src="/icons/github.png" />
+              </a>
+            )}
+            {slideData[index].link && (
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={slideData[index].link}
+              >
+                <img alt="Github" src="/icons/link.png" />
+              </a>
+            )}{" "}
+          </div>
         </InfoPane>
       </div>
       <div className="right">

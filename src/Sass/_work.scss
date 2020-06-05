@@ -2,10 +2,17 @@
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  text-align: center;
+  color: $color-grey-dark-3;
+
   .left {
     flex: 0.4;
     margin: 5rem;
+
+    & .infopane--heading {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
 
     & .icon__Group {
       margin: 1rem;
