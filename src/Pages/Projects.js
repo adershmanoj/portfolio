@@ -23,6 +23,18 @@ const slideData = [
   },
   {
     index: 2,
+    headline: "CheckPoint",
+    button: "Visit",
+    src: imageFolder + "checkpoint.gif",
+    data:
+      "CheckPoint is a Visual Studio Code extension to track file change history from an easy to use graphical interface.",
+    tags: ["NodeJS", "TypeScript", "Mocha", "Winston", "Azure DevOps"],
+    github: "https://github.com/BurntBanana/checkpoint",
+    link:
+      "https://marketplace.visualstudio.com/items?itemName=BurntBanana.checkpoint",
+  },
+  {
+    index: 3,
     headline: "Notes App",
     button: "Visit",
     src: imageFolder + "notes.jpg",
@@ -33,7 +45,7 @@ const slideData = [
     link: "https://notes-adershmanoj.herokuapp.com",
   },
   {
-    index: 3,
+    index: 4,
     headline: "URL Shortener",
     button: "Visit",
     src: imageFolder + "shortlink.jpg",
@@ -41,17 +53,6 @@ const slideData = [
     tags: ["React", "Meteor", "MongoDB", "Heroku"],
     github: "https://github.com/adershmanoj/short-link-meteor",
     link: "https://short-link-adershmanoj.herokuapp.com",
-  },
-  {
-    index: 4,
-    headline: "Jobfair 2018",
-    button: "Visit",
-    src: imageFolder + "jobfair.jpg",
-    data:
-      "SCT Jobfair is the annual inter college placement event conducted by SCT College of Engineerning.",
-    tags: ["HTML", "JS", "CSS"],
-    github: "https://github.com/adershmanoj/SCT-Jobfair",
-    link: "http://adershmanoj.me/SCT-Jobfair",
   },
   {
     index: 5,
@@ -62,6 +63,17 @@ const slideData = [
     tags: ["HTML", "JS", "Sass"],
     github: "https://github.com/adershmanoj/trillo",
     link: "http://adershmanoj.me/trillo",
+  },
+  {
+    index: 6,
+    headline: "Jobfair 2018",
+    button: "Visit",
+    src: imageFolder + "jobfair.jpg",
+    data:
+      "SCT Jobfair is the annual inter college placement event conducted by SCT College of Engineerning.",
+    tags: ["HTML", "JS", "CSS"],
+    github: "https://github.com/adershmanoj/SCT-Jobfair",
+    link: "http://adershmanoj.me/SCT-Jobfair",
   },
 ];
 
