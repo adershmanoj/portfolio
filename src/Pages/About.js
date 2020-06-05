@@ -38,9 +38,9 @@ function About() {
       <div className="right">
         {/* <Header first="About Me" /> */}
         <div className="about--text">
-          <h4>Who is this? You may ask</h4>
+          <h4 className="about--text__heading">Who is this? You may ask</h4>
           <p>
-            I'm a 23 year old developer from Kerala, India with experience in
+            <span className='about--text__bold'>I</span> am a 23 year old developer from Kerala, India with experience in
             web development, cybersecurity and automation. Fuelled by a passion
             for programming, I consider myself a forever student, eager to keep
             up with developments in the industry and to continually improve
@@ -69,7 +69,7 @@ function About() {
           </div>
           <p>
             If you are looking for a talented developer and is impressed by what
-            you see here, feel free to reach out to me at: <a href="mailto:hi@adershmanoj.dev">hi@adershmanoj.dev</a>  
+            you see here, feel free to reach out to me at: <a className='about--text__link' href="mailto:hi@adershmanoj.dev">hi@adershmanoj.dev</a>  
           </p>
         </div>
       </div>

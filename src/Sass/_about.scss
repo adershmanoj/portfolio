@@ -16,6 +16,18 @@
     font-size: $font-size;
     text-align: justify;
     line-height: 1.6;
+    &__bold, &__heading {
+      font-size: 2rem;
+      color: $color-subtext-1;
+    }
+    &__heading {
+      margin-bottom: 1rem;
+    }
+    &__link {
+      color: $color-subtext-1;
+      font-weight: bold;
+      text-decoration: none;
+    }
   }
   .languages {
     text-align: left;
