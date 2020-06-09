@@ -1,49 +1,61 @@
 .home {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  @include respond(phone) {
+    flex-flow: column;
+  }
+  .left {
+    align-self: center;
+    flex: 1;
+  }
+  .right {
+    flex-direction: column;
     display: flex;
-    justify-content: center;
-    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
 
-    .left {
-        align-self: center;
-        flex: 1;
+    .fade {
+      display: inline-flex;
     }
-    .right {
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex: 1;
-        .fade {
-            display: inline-flex;
-        }
-        .code {
-            font-size: $font-size;
-            font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-            color: $color-white;
-            text-align: left;
-            flex: 0.6;
-            & > * {
-                margin: 2rem;
-            }
+    .code {
+      font-size: $font-size;
+      font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New,
+        monospace;
+      color: $color-white;
+      text-align: left;
+      @include respond(tab-port) {
+        text-align: center;
+      }
+      flex: 0.6;
+      & > * {
+        margin: 2rem;
+      }
+      &__typing {
+        text-align: left;
+        display: inline-block;
+        min-width: 15rem;
+      }
 
-            &--green {
-                color: $color-code-green;
-            }
-            &--darkblue {
-                color: $color-tertiary-dark;
-            }
-            &--lightblue {
-                color: $color-tertiary-light;
-            }
-            &--yellow {
-                color: $color-code-yellow;
-            }
-            &--red {
-                color: $color-code-brown;
-            }
-            &__block {
-                width: 40rem;
-            }
-        }
+      &--green {
+        color: $color-code-green;
+      }
+      &--darkblue {
+        color: $color-tertiary-dark;
+      }
+      &--lightblue {
+        color: $color-tertiary-light;
+      }
+      &--yellow {
+        color: $color-code-yellow;
+      }
+      &--red {
+        color: $color-code-brown;
+      }
+      &__block {
+        width: 40rem;
+      }
     }
+  }
 }

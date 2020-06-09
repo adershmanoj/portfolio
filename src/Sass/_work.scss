@@ -4,6 +4,9 @@
   justify-content: center;
   color: $color-grey-dark-3;
 
+  @include respond(phone) {
+    flex-flow: column-reverse;
+  }
   .left {
     flex: 0.4;
     margin: 5rem;
