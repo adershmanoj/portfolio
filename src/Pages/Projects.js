@@ -94,19 +94,21 @@ function Projects() {
           <div className="icon__Group">
             {slideData[index].github && (
               <a
+                className="button button__light"
                 rel="noopener noreferrer"
                 target="_blank"
                 href={slideData[index].github}
-              >
+              > View on Github
                 <img alt="Github" src="/icons/github.png" />
               </a>
             )}
             {slideData[index].link && (
               <a
+              className="button button__light"
                 rel="noopener noreferrer"
                 target="_blank"
                 href={slideData[index].link}
-              >
+              > Visit link
                 <img alt="Github" src="/icons/link.png" />
               </a>
             )}{" "}

@@ -4,7 +4,7 @@
   justify-content: center;
   color: $color-grey-dark-3;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     flex-flow: column-reverse;
   }
   .left {
@@ -18,7 +18,7 @@
     }
 
     & .icon__Group {
-      margin: 1rem;
+      margin: 1rem 0;
       margin-bottom: 0;
 
       & > a {

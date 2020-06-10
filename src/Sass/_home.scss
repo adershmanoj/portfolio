@@ -24,10 +24,6 @@
       font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New,
         monospace;
       color: $color-white;
-      text-align: left;
-      @include respond(tab-port) {
-        text-align: center;
-      }
       flex: 0.6;
       & > * {
         margin: 2rem;

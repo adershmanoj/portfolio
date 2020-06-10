@@ -3,6 +3,7 @@ import Typewriter from "../Components/Typewriter";
 import FadeIn from "react-fade-in";
 import Portrait from "../Components/Portrait";
 import Header from "../Components/Header";
+import {Link} from 'react-router-dom';
 
 function Home() {
   const interests = [
@@ -61,6 +62,7 @@ function Home() {
           </div>
           <div className="code__block">[ {returncurrentInterests()}]</div>
         </div>
+        <Link className='button'to="/about">About page</Link>
       </div>
     </div>
   );

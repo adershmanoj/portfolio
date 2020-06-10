@@ -1,7 +1,6 @@
 import React, { memo, useState } from "react";
 
 import InfoPane from "../Components/InfoPane";
-import Header from "../Components/Header";
 import FadeIn from "react-fade-in";
 import Typewriter from "../Components/Typewriter";
 

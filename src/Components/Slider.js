@@ -60,7 +60,7 @@ class Slide extends React.Component {
   }
 
   render() {
-    const { src, button, headline, index } = this.props.slide;
+    const { src, headline, index } = this.props.slide;
     const current = this.props.current;
     let classNames = "slide";
 

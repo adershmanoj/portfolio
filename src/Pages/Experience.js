@@ -1,4 +1,4 @@
-import React, { memo, Fragment } from "react";
+import React, { memo } from "react";
 import Timeline from "../Components/Timeline";
 
 const data = {
