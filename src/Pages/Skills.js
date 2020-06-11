@@ -106,7 +106,7 @@ function Skills() {
           <h1 className="title">{item.name}</h1>
           <div className="skills--container">
             {item.data?.map((skill) => (
-              <div className="card skill">
+              <div className="card skill" key={skill.name}>
                 <div className="skill--logo">
                   <img src={"./icons/" + skill.logo} alt={skill.name} />
                 </div>

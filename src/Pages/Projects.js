@@ -88,7 +88,9 @@ function Projects() {
           <p>{slideData[index].data}</p>
           <p className="tag__Group">
             {slideData[index].tags?.map((tag) => (
-              <span className="tag__Tag">{tag}</span>
+              <span className="tag__Tag" key={tag}>
+                {tag}
+              </span>
             ))}
           </p>
           <div className="icon__Group">
@@ -98,17 +100,21 @@ function Projects() {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={slideData[index].github}
-              > View on Github
+              >
+                {" "}
+                View on Github
                 <img alt="Github" src="/icons/github.png" />
               </a>
             )}
             {slideData[index].link && (
               <a
-              className="button button__light"
+                className="button button__light"
                 rel="noopener noreferrer"
                 target="_blank"
                 href={slideData[index].link}
-              > Visit link
+              >
+                {" "}
+                Visit link
                 <img alt="Github" src="/icons/link.png" />
               </a>
             )}{" "}

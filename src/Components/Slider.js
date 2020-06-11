@@ -48,6 +48,7 @@ class Slide extends React.Component {
   }
 
   handleTouchEnd(event) {
+    event.stopPropagation();
     if (this.xStart - this.xMove > 50) {
       this.props.handleNext(event);
     } else if (this.xMove - this.xStart > 50) {
