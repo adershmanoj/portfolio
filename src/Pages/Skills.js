@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -119,6 +120,11 @@ function Skills() {
           </div>
         </div>
       ))}
+      <div className='link'>
+        <Link className="button" to="/experience">
+          Experience page
+        </Link>
+      </div>
     </div>
   );
 }

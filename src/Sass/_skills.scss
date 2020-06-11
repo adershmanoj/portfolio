@@ -14,7 +14,6 @@
       @include flexgrid(4, 2rem);
     }
   }
-
   & .skill {
     font-size: $font-size;
     &:hover {
@@ -50,4 +49,8 @@
       }
     }
   }
+}
+.link {
+  padding: 0 3rem;
+  text-align: center;
 }
