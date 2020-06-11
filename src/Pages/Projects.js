@@ -88,7 +88,7 @@ function Projects() {
           <p>{slideData[index].data}</p>
           <p className="tag__Group">
             {slideData[index].tags?.map((tag) => (
-              <span className="tag__Tag">{tag}</span>
+              <span className="tag__Tag" key={tag}>{tag}</span>
             ))}
           </p>
           <div className="icon__Group">

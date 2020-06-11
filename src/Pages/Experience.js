@@ -44,8 +44,7 @@ function Experience() {
   return (
     <div className="experience">
       {Object.keys(data)?.map((item) => (
-        <div>
-          {/* <h1 className="title">{item}</h1> */}
+        <div key={item}>
           <Timeline data={data[item]} />
         </div>
       ))}

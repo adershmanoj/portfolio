@@ -13,7 +13,7 @@ function Timeline({ data }) {
             <p>{event.description}</p>
             <p className="tag__Group">
               {event.tags?.map((tag) => (
-                <span className="tag__Tag">{tag}</span>
+                <span className="tag__Tag" key={tag}>{tag}</span>
               ))}
             </p>
           </div>
